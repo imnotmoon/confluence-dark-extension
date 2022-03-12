@@ -3,11 +3,14 @@
   "version": "0.1",
   "description": "눈 아픈 라이너를 위한 Confluence 다크모드 익스텐션",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
+  "author": "imnotmoon",
+  "background": {},
   "permissions": ["storage", "activeTab", "scripting"],
+  "web_accessible_resources": [{
+    "resources": [],
+    "matches": ["<all_urls>"]
+  }],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "src/html/popup.html"
   }
 }

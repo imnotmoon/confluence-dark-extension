@@ -7,14 +7,11 @@ document.querySelector('#changeColor').addEventListener("click", async () => {
     });
 });
 
-// The body of this function will be executed as a content script inside the
-// current page
 function setPageBackgroundColor() {
     chrome.storage.sync.get("color", ({ color }) => {
-        console.log('hihhiih', color);
-        // document.body.style.backgroundColor = color;
-        ['full-height-container', 'main', 'footer'].map(dom => {
-            console.log(dom);
+        console.log('hihi')
+        ['full-height-container', 'main', 'footer'].forEach(dom => {
+            console.log(document.getElementById(dom));
             document.getElementById(dom).style.backgroundColor = color;
         })
     });
